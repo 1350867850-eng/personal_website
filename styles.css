@@ -253,18 +253,22 @@ h1 {
   z-index: -1;
 }
 
-.profile-panel img {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  border-bottom: 1px solid var(--ink);
-}
-
 .profile-panel div {
   display: grid;
   gap: 0.15rem;
   padding: 1rem 1.1rem;
   border-bottom: 1px solid var(--line);
+}
+
+.profile-panel .profile-name {
+  min-height: 260px;
+  align-content: end;
+  padding: clamp(1.25rem, 4vw, 2rem);
+  background:
+    linear-gradient(135deg, rgba(31, 111, 85, 0.18), transparent 48%),
+    linear-gradient(315deg, rgba(201, 88, 63, 0.16), transparent 44%),
+    var(--paper-deep);
+  border-bottom-color: var(--ink);
 }
 
 .profile-panel div:last-child {
@@ -280,6 +284,13 @@ h1 {
 
 .profile-panel strong {
   font-size: 1rem;
+}
+
+.profile-panel .profile-name strong {
+  max-width: 10ch;
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 5vw, 3.35rem);
+  line-height: 1;
 }
 
 .section {
